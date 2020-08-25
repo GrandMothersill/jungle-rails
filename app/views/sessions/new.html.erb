@@ -1,9 +1,16 @@
 <h1>Login</h1>
 
+
+<div class="jumbotron">
 <%= form_tag '/login' do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
+    <ul>
+
+  <li>Email: <%= text_field_tag :email %></li>
+  <li>Password: <%= password_field_tag :password %></li>
   <%= submit_tag "Submit" %>
 
+  </ul>
+
 <% end %>
+</div>
