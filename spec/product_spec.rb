@@ -4,15 +4,16 @@ RSpec.describe Product, type: :model do
   describe 'Validations' do
     
     before do
+      @category = Category.new(
+          :name => 'Tester'
+        )
       @product = Product.new(
         :name => 'BOB', 
         :price_cents => 4000, 
         :quantity => 4, 
         :category_id => 1
         )
-        @category = Category.new(
-          :name => 'Tester'
-        )
+        
 
     end
 
