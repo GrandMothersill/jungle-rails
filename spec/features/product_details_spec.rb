@@ -18,16 +18,12 @@ RSpec.feature "Visitor can navigate from the home page to the product detail pag
 end
 
   scenario "they see one product in detail" do
-    # ACT
+    
     visit root_path
-    # visit ('about#show')
     
     click_link('Details', match: :first)
     
-    # DEBUG / VERIFY
-    
     expect(page).to have_css 'article.product-detail', count: 1
-    save_screenshot
   end
 
 end
